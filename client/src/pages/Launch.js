@@ -3,10 +3,11 @@ import { Appear, Button, Loading, Paragraph } from "arwes";
 import Clickable from "../components/Clickable";
 
 const Launch = (props) => {
+	console.log(props);
 	const selectorBody = useMemo(() => {
 		return props.planets?.map((planet) => (
-			<option value={planet.firstName} key={planet.firstName}>
-				{planet.firstName}
+			<option value={planet.kepid} key={planet.kepid}>
+				{planet.kepler_name}
 			</option>
 		));
 	}, [props.planets]);
